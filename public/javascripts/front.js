@@ -15,13 +15,13 @@ document.querySelectorAll(".delete-button").forEach(
 )
 
 var btnCargar = document.querySelector("#cargarDatos")
+const templateRow = document.querySelector("#templateRow");
 
 if(btnCargar) btnCargar.addEventListener("click",()=>{
     fetch("/api")
     .then( ( response )=>{ if(response.ok) return response.json() } )
     .then( ( content )=>{ 
         console.log(content) 
-        const templateRow = document.querySelector("#templateRow");
         const tableUser = document.querySelector("tbody");
         tableUser.innerHTML = "";
         content.forEach( (el,pos) => {
