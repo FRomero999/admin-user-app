@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gestor Usuarios</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="bootstrap.min.css">
+  </head>
+  <body class="d-flex flex-column justify-content-center 
+               align-items-center gap-5 min-vh-100">
+    <h1>Gestor Usuarios</h1>
+    <div class="container border border-5 
+                rounded-3 p-5">
+
+      <div class="row">
+
+        <div class="col-lg-6 table-responsive">
+          <h2>Listado</h2>
+          <table class="table table-bordered table-hover 
+                        table-stripped col-12">
+            <thead>
+              <tr class="table-secondary">
+                <th>Pos</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                <template id="templateRow">
+                  <tr>
+                    <td class="index"></td>
+                    <td class="name"></td>
+                    <td class="email"></td>
+                    <td><a href="" class="btn btn-warning btn-sm delete-button">Borrar</a></td>
+                  </tr>
+                </template>           
+            </tbody>
+          </table>
+          <button id="cargarDatos">Cargar datos</button>
+        </div>
+
+        <div class="col-lg-6">
+          <h2>Nuevo</h2>
+          <form action="#" method="post" class="d-flex flex-column gap-3 align-items-start">
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+            <input type="email" class="form-control" name="email" placeholder="email@example.com">
+            <input type="submit" value="Guardar" class="btn btn-primary btn-lg">
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="bootstrap.min.js"></script>
+    <script src="javascripts/front.js"></script>
+  </body>
+</html>
