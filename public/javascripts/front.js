@@ -15,14 +15,20 @@ document.querySelectorAll(".delete-button").forEach(
 )
 
 var btnCargar = document.querySelector("#cargarDatos")
+const templateRow = document.querySelector("#templateRow");
+const tableUser = document.querySelector("tbody");
 
 if(btnCargar) btnCargar.addEventListener("click",()=>{
+    document.querySelector(".loading").classList.remove("d-none");    
+    loadTable();
+    document.querySelector(".loading").classList.add("d-none");    
+})
+
+function loadTable(){
     fetch("/api")
     .then( ( response )=>{ if(response.ok) return response.json() } )
     .then( ( content )=>{ 
         console.log(content) 
-        const templateRow = document.querySelector("#templateRow");
-        const tableUser = document.querySelector("tbody");
         tableUser.innerHTML = "";
         content.forEach( (el,pos) => {
             let newRow = templateRow.content.cloneNode(true);
@@ -34,4 +40,45 @@ if(btnCargar) btnCargar.addEventListener("click",()=>{
         })
     })
     .catch( (err) => { console.log(err) })
+}
+
+
+loadTable();
+
+
+const formulario = document.querySelector("form")
+
+if(formulario) formulario.addEventListener("submit",(ev)=>{
+    ev.preventDefault();
+
+    //const formData = new FormData(formulario);
+
+    formData = {
+        nombre : document.querySelector("input[name=nombre]").value,
+        email : document.querySelector("input[name=email]").value
+    }
+
+    fetch(".",{
+        method: "POST",
+        headers:{
+            "content-type":"application/json"
+        },
+        body: JSON.stringify(formData)
+    })
 })
+
+const btnColor = document.querySelector(".btn-color")
+if(btnColor) btnColor.addEventListener("click",()=>{
+    if(window.localStorage.getItem("color") ) {
+        window.localStorage.removeItem("color");
+        document.querySelector("body").classList.remove("bg-primary")
+    }
+    else {
+        window.localStorage.setItem("color","azul");
+        document.querySelector("body").classList.add("bg-primary")
+    }
+})
+
+if(window.localStorage.getItem("color")==="azul"){
+    document.querySelector("body").classList.add("bg-primary")
+}

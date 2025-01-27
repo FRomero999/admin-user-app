@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   var new_user = { name: req.body.nombre, email: req.body.email};
+  console.log(req.body)
   data.add(new_user);
   res.redirect("/");
 });
