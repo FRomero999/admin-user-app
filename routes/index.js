@@ -21,4 +21,9 @@ router.get('/delete/:index', function(req,res,next){
   res.redirect("/");
 });
 
+/* GET map page. */
+router.get('/mapa', function(req, res, next) {
+  res.render('mapa', {});
+});
+
 module.exports = router;

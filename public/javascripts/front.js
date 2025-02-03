@@ -15,6 +15,8 @@ document.querySelectorAll(".delete-button").forEach(
 )
 
 var btnCargar = document.querySelector("#cargarDatos")
+const templateRow = document.querySelector("#templateRow");
+const tableUser = document.querySelector("tbody");
 
 if(btnCargar) btnCargar.addEventListener("click",()=>{
     document.querySelector(".loading").classList.remove("d-none");    
@@ -27,8 +29,7 @@ function loadTable(){
     .then( ( response )=>{ if(response.ok) return response.json() } )
     .then( ( content )=>{ 
         console.log(content) 
-        const templateRow = document.querySelector("#templateRow");
-        const tableUser = document.querySelector("tbody");
+
         tableUser.innerHTML = "";
         content.forEach( (el,pos) => {
             let newRow = templateRow.content.cloneNode(true);
@@ -40,4 +41,52 @@ function loadTable(){
         })
     })
     .catch( (err) => { console.log(err) })
+}
+
+if(document.querySelector("#mapa")){
+    var map = L.map('mapa').setView([36.73, -4.42], 6);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+}
+
+
+const sonidoZoom = new Audio("riser-hit-sfx-001-289802.mp3");
+const sonidofondo = new Audio("relaxing-guitar-loop-v5-245859.mp3");
+
+
+
+const btnLocalizar = document.querySelector("#localizar")
+btnLocalizar?.addEventListener("click",()=>{
+    if(!map) return;
+    if(window.navigator.geolocation){
+        window.navigator.geolocation.getCurrentPosition( 
+            (pos)=>{
+                sonidoZoom.currentTime=0;
+                sonidoZoom.volume=0.5;
+                sonidoZoom.playbackRate=2;
+                sonidoZoom.play();
+
+                sonidofondo.volume=0.2;
+                sonidofondo.loop = true;
+                sonidofondo.play()
+
+                const position = [pos.coords.latitude, pos.coords.longitude]
+                var circle = L.circle(position, {
+                    color: 'green',
+                    fillColor: '#f03',
+                    fillOpacity: 0.5,
+                    radius: 300
+                }).addTo(map);
+                var marker = L.marker(position).addTo(map);
+                marker.bindPopup("<h4>Posicion actual</h4>");
+                marker.addEventListener("click",()=>{
+                    console.log("click!")
+                })
+                map.setView(position,16);
+
+            }
+        )
+    }
 })
