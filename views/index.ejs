@@ -4,6 +4,7 @@
     <title>Gestor Usuarios</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="dataTables.dataTables.min.css">
   </head>
   <body class="d-flex flex-column justify-content-center 
                align-items-center gap-5 min-vh-100">
@@ -16,7 +17,7 @@
         <div class="col-lg-6 table-responsive">
           <h2>Listado</h2>
           <table class="table table-bordered table-hover 
-                        table-stripped col-12">
+                        table-stripped col-12" id="tabla">
             <thead>
               <tr class="table-secondary">
                 <th>Pos</th>
@@ -53,6 +54,8 @@
     </div>
 
     <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="dataTables.min.js"></script>
     <script src="javascripts/front.js"></script>
   </body>
 </html>

@@ -1,0 +1,109 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "nombre": "Sevilla",
+          "poblacion": 688711,
+          "gentilicio": "Hispalense",
+          "provincia": "Sevilla"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-5.9844589, 37.3886303]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "nombre": "Málaga",
+          "poblacion": 577405,
+          "gentilicio": "Malagueño/a",
+          "provincia": "Málaga"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-4.4212655, 36.7194444]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "nombre": "Córdoba",
+          "poblacion": 325708,
+          "gentilicio": "Cordobés/a",
+          "provincia": "Córdoba"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-4.7793835, 37.8847267]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "nombre": "Granada",
+          "poblacion": 232208,
+          "gentilicio": "Granadino/a",
+          "provincia": "Granada"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-3.5985571, 37.1773363]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "nombre": "Cádiz",
+          "poblacion": 116979,
+          "gentilicio": "Gaditano/a",
+          "provincia": "Cádiz"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-6.2995807, 36.5297709]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "nombre": "Huelva",
+          "poblacion": 144258,
+          "gentilicio": "Onubense",
+          "provincia": "Huelva"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-6.9447222, 37.2583333]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "nombre": "Jaén",
+          "poblacion": 112999,
+          "gentilicio": "Jiennense",
+          "provincia": "Jaén"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-3.7909667, 37.7657278]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "nombre": "Almería",
+          "poblacion": 200753,
+          "gentilicio": "Almeriense",
+          "provincia": "Almería"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-2.4597222, 36.8402778]
+        }
+      }
+    ]
+  }

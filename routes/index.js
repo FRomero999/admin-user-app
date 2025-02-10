@@ -5,7 +5,7 @@ var data  = require('../data/data_provider.js')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var users = data.findAll()
-  res.render('index2', { users:users });
+  res.render('index', { users:users });
 });
 
 router.post('/', function(req, res, next) {

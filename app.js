@@ -21,6 +21,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
 app.use(express.static(path.join(__dirname, 'node_modules/leaflet/dist')));
+app.use(express.static(path.join(__dirname, 'node_modules/sweetalert2/dist')));
+app.use(express.static(path.join(__dirname, 'node_modules/jquery/dist')));
+app.use(express.static(path.join(__dirname, 'node_modules/datatables.net/js')));
+app.use(express.static(path.join(__dirname, 'node_modules/datatables.net-dt/css')));
 
 
 app.use('/', indexRouter);
