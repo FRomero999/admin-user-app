@@ -135,3 +135,21 @@ if(document.querySelector("#mapa")){
 
 }
 
+
+if(document.querySelector("#bio")){
+    const quill = new Quill('#bio',{
+        theme: 'snow'
+    });
+}
+
+document.querySelectorAll("a.showUser").forEach( el=>{
+    el.addEventListener("click",(ev)=>{
+        ev.preventDefault();
+        console.log(ev.target);
+        let user = JSON.parse(ev.target.dataset.value);
+        document.querySelector("input[name=nombre]").value = user.name
+        document.querySelector("input[name=email]").value = user.email
+
+    })
+})
+

@@ -1,141 +1,42 @@
 var temporal_data = [
     {
-        name:"Francisco",
-        email: "francisco@cesur.com"
+        "name": "Francisco",
+        "email": "francisco@cesur.com",
+        "bio": "Docente de informática con experiencia en desarrollo web y bases de datos."
     },
     {
-        name:"Victor",
-        email: "victor@cesur.com"
+        "name": "Victor",
+        "email": "victor@cesur.com",
+        "bio": "Apasionado por la ciberseguridad y la administración de sistemas."
     },
     {
-        name:"Victor",
-        email: "victor@cesur.com"
+        "name": "Laura",
+        "email": "laura@cesur.com",
+        "bio": "Especialista en diseño UX/UI y accesibilidad web."
     },
     {
-        name:"Victor",
-        email: "victor@cesur.com"
+        "name": "Carlos",
+        "email": "carlos@cesur.com",
+        "bio": "Desarrollador backend con experiencia en arquitecturas escalables."
     },
     {
-        name:"Victor",
-        email: "victor@cesur.com"
+        "name": "Ana",
+        "email": "ana@cesur.com",
+        "bio": "Ingeniera de software con enfoque en inteligencia artificial."
     },
     {
-        name:"Victor",
-        email: "victor@cesur.com"
+        "name": "Miguel",
+        "email": "miguel@cesur.com",
+        "bio": "Experto en bases de datos y optimización de consultas SQL."
     },
     {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
-    },
-    {
-        name:"Victor",
-        email: "victor@cesur.com"
+        "name": "Sonia",
+        "email": "sonia@cesur.com",
+        "bio": "Full-stack developer con pasión por JavaScript y frameworks modernos."
     }
-]
+];
+
+
 
 function findAll(){
     return temporal_data

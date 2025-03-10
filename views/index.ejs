@@ -5,6 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="dataTables.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    
   </head>
   <body class="d-flex flex-column justify-content-center 
                align-items-center gap-5 min-vh-100">
@@ -23,6 +25,7 @@
                 <th>Pos</th>
                 <th>Nombre</th>
                 <th>Email</th>
+                <th>Bio</th>
                 <th></th>
               </tr>
             </thead>
@@ -30,8 +33,9 @@
               <% for( let index = 0; index < users.length; index++ ) { %>
                 <tr>
                   <td><%= index %></td>
-                  <td><%= users[index].name %></td>
+                  <td><a href="#" class="showUser" data-pos="<%= index %>" data-value="<%= JSON.stringify(users[index]) %>"><%= users[index].name %></a></td>
                   <td><%= users[index].email %></td>
+                  <td><%= users[index].bio %></td>
                   <td><a href="delete/<%= index %>" class="btn btn-warning btn-sm delete-button">Borrar</a></td>
                 </tr>                
               <% } %>
@@ -45,6 +49,7 @@
           <form action="#" method="post" class="d-flex flex-column gap-3 align-items-start">
             <input type="text" class="form-control" name="nombre" placeholder="Nombre">
             <input type="email" class="form-control" name="email" placeholder="email@example.com">
+            <div id="bio"></div>
             <input type="submit" value="Guardar" class="btn btn-primary btn-lg">
           </form>
         </div>
@@ -56,6 +61,8 @@
     <script src="bootstrap.min.js"></script>
     <script src="jquery.min.js"></script>
     <script src="dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
     <script src="javascripts/front.js"></script>
+
   </body>
 </html>
